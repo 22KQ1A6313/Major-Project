@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body> 
+    <h3><a href="home.html" class="btn btn-info">Home</a></h3>
+    <style>
+body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 20;
+    }
+    
+    .container {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    h1{
+        margin-bottom: 0px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    label {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    input {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    button {
+        padding: 10px;
+        background: #007BFF;
+        color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background: #b3006e;
+    }
+    
+    h1{
+        text-align: above;
+    }
+    
+    a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+    body{
+        background-image: url(contactimg.jpg);
+        background-size: cover;
+    }
+</style>
+</head>
+<body>
+    <h3><a href="newloginpage.html" class="btn btn-info">Home</a></h3>
+<div class="container">
+  <form action="home.html">
+    <h1>Contact Us</h1>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    <br>
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    <br>
+    <label for="email">Email</label>
+   <input type="email" id="email" name="email" placeholder="email...">
+   <br>
+<label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+      <option value="india">India</option>
+      <option value="europe">Europe</option>
+    </select>
+    <br>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject:"placeholder="Write something.." style="height:80"></textarea>
+<br>
+    <input type="submit" value="Send Message">
+    <p><a href="#" id="backToLoginLink">Back to Login</a></p>
+  </form>
+</div>
+</body>
+</html>

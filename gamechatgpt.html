@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 18px;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Gaming Website</h1>
+    <p>Click on a game link below to play:</p>
+    <ul id="game-list">
+        <!-- Game links will be inserted here -->
+    </ul>
+
+    <script>
+        // List of game links
+        const games = [
+            { name: "Game 1", url: "https://www.playfusion.org" },
+            { name: "Game 2", url: "https://example.com/game2" },
+            { name: "Game 3", url: "https://example.com/game3" }
+        ];
+
+        // Function to create game links
+        function createGameLinks() {
+            const gameList = document.getElementById('game-list');
+            games.forEach(game => {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = game.url;
+                link.textContent = game.name;
+                link.target = "_blank"; // Opens the link in a new tab
+                listItem.appendChild(link);
+                gameList.appendChild(listItem);
+            });
+        }
+
+        // Initialize game links
+        createGameLinks();
+    </script>
+</body>
+</html>
+

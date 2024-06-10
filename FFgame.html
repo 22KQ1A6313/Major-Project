@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Online Gaming</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #444;
+            border-radius: 10px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        body{
+    background-image: url(playnow.jpg);
+    width: cover;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Online Gaming</h1>
+        <p>Join millions of players in the most thrilling battle royale experience!</p>
+        <a href="game.html" class="button">Play Now</a>
+    </div>
+    <script>const express = require('express');
+        const app = express();
+        const port = 3000;
+        
+        app.use(express.static('public'));
+        
+        app.get('/', (req, res) => {
+            res.sendFile(__dirname + '/public/home.html');
+        });
+        
+        app.listen(port, () => {
+            console.log(`Server is running at http://localhost:${port}`);
+        });
+        // server.js (Add this to your existing server.js)
+app.use(express.json());
+
+app.post('/register', async (req, res) => {
+    const { username, email, password } = req.body;
+
+    const newUser = new User({ username, email, password });
+    try {
+        await newUser.save();
+        res.status(201).send('User registered successfully');
+    } catch (error) {
+        res.status(400).send('Error registering user');
+    }
+});
+</script>
+</body>
+</html>
+

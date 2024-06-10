@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <center>
+    <style> body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        display: center;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 20;
+        
+    }
+    .container {
+        display : flex;
+        justify-content: center;
+        align-items : center;
+        align-items:center;
+    }
+    
+    .login-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+    }
+    h2 {
+        margin-bottom: 20px;
+    }
+    .banner{
+        width: 100%;
+        height: 100vh;
+        background-image: url("loginpageimg.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    .input-group {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    input {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    .forgot-password {
+        margin-top: 15px;
+    }
+    
+    .forgot-password a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    
+    .forgot-password a:hover {
+        text-decoration: underline;
+    }
+body{
+    background-image: url(loginbimage.jpg);
+    width: auto;
+}
+
+    </style>
+    <div class="login-container">
+        <form class=""glass-login-form"></form>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <form action=""successful.html onsubmit="return validation();"></form>      
+                      <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p><a href="#"id="forgotPasswordLink">Forgot Password?</a></p>
+        </form>
+        <form id="forgotPasswordForm" style="display: none;">
+            <h2>Forgot Password</h2>
+            <div class="form-group">
+                <label for="resetEmail">Email:</label>
+                <input type="email" id="resetEmail" required>
+            </div>
+            <button type="submit">Send Reset Link</button>
+            <p><a href="#" id="backToLoginLink">Back to Login</a></p>
+        </form>
+
+        <form id="resetPasswordForm" style="display: none;">
+            <h2>Reset Password</h2>
+            <div class="form-group">
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" required>
+            </div>
+            <button type="submit">Reset Password</button>
+        </form>
+        <form name="loginForm" action="LoginSuccess.html" onsubmit=""return newloginpag(this)></form>
+    </div>
+    <script>
+        document.getElementById('forgotPasswordLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('loginForm').style.display = 'none';
+    document.getElementById('forgotPasswordForm').style.display = 'block';
+});
+
+document.getElementById('backToLoginLink').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('forgotPasswordForm').style.display = 'none';
+    document.getElementById('loginForm').style.display = 'block';
+});
+ocument.getElementById("loginForm").addEventListener("submit", function(event){
+    event.preventDefault(); // prevent the form from submitting
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    
+    // Basic validation (you should implement proper validation)
+    if(username === "sruthi" && password === "pace123") {
+        document.getElementById("loginmessage").innerText = "Login successful!";
+        // Redirect to another page or perform other actions upon successful login
+    } else {
+        document.getElementById("loginmessage").innerText = "Invalid username or password!";
+    }
+});
+
+document.getElementById('forgotPasswordForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('resetEmail').value;
+    // Implement sending reset link to the user's email
+    console.log('Reset link sent to:', email);
+});
+
+document.getElementById('resetPasswordForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const newPassword = document.getElementById('newPassword').value;
+    // Implement resetting the password
+    console.log('Password reset to:', newPassword);
+});
+     </script>
+    </center>
+    </body>
+    </html>
+
